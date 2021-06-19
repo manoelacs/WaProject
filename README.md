@@ -5,11 +5,10 @@ Na tela de produtos temos duas abas: Produtos e Carrinho de compras.
 ![image](https://user-images.githubusercontent.com/20269170/122593667-62d9fb00-d03c-11eb-8231-fea526995915.png)
 
 * Na lista de compras podemos adicionar itens ao carrinho de compras.
-![image](https://user-images.githubusercontent.com/20269170/122598969-f95dea80-d043-11eb-84d8-685f2252015c.png)
+![image](https://user-images.githubusercontent.com/20269170/122643259-362dee00-d0e5-11eb-9289-f161c7db92ef.png)
 
 * Na aba carrinho de compras podemos fnalizar o pedido.
-![image](https://user-images.githubusercontent.com/20269170/122598888-d4697780-d043-11eb-9584-43b906982b41.png)
-
+![image](https://user-images.githubusercontent.com/20269170/122643287-607fab80-d0e5-11eb-85f0-63bcdb955234.png)
 
 
 ### Ta tela de pedidos, temos a listagem dos pedidos realizados, em cada pedid é apresentado um sublista com o detalhamento de produtos com descrição, quantidade, preço e total de cada produtos comprado em cada pedido.
