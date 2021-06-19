@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "%PROJECT-REPO%",
-    "seed": "git@bitbucket.org:waproject/waproject-base-web.git"
+     "seed": "https://github.com/manoelacs/WaProject.git" 
   },
   "scripts": {
     "start": "react-scripts start",

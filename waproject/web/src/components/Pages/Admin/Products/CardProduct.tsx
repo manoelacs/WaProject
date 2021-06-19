@@ -16,7 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import React, { useEffect, useState } from 'react';
 
-import { ccyFormat } from '../../FuncionsShared';
+import { ccyFormat, priceRow } from '../../FuncionsShared';
 
 
 const CardProduct = (props: {id:any; avatarUrl: any; title: string; subtitle: any; 
@@ -35,7 +35,7 @@ const CardProduct = (props: {id:any; avatarUrl: any; title: string; subtitle: an
    }, [quantity, total]); 
    
   const changeQuantity = (e: any) => {   
-    let auxtotal = Number(ccyFormat(total));   
+    let auxtotal = Number( ccyFormat(priceRow(e.target.value, price)));   
     setQuantity( e.target.value );  
     setTotal( auxtotal );      
   }; 
@@ -55,7 +55,7 @@ const CardProduct = (props: {id:any; avatarUrl: any; title: string; subtitle: an
     resetState();
   } 
   return (
-    <Card  style={{ height: "450px" }}>
+    <Card  style={{ height: "460px" }}>
         <CardHeader
           avatar={<Avatar src={avatarUrl} />}
           action={
@@ -66,24 +66,25 @@ const CardProduct = (props: {id:any; avatarUrl: any; title: string; subtitle: an
           title={title}
           subheader={subtitle}
         />
-        <CardMedia style={{ height: "150px" }} image={imageUrl} />
-        <CardContent>
+        <CardMedia style={{ height: "160px" }} image={imageUrl} />
+        <CardContent style={{ height: "100px" }}>
           <Typography variant="body2" component="p">
             {description}
           </Typography>
         </CardContent>
-        <CardActions>    
-          <Grid container justify='center' alignItems='center' spacing={2}>
-            <Tooltip 
-              title="Adiciona item ao carrinho de compra" 
-              aria-label="add"  
-              onClick={ handleClickOpen }
-              style = {{ paddingBottom : '10px' }}
-            >
-              <Fab >
-                  <AddShoppingCartIcon />
-              </Fab>                
-            </Tooltip>
+        <CardActions  >    
+          <Grid container justify='center'  style={{paddingTop:'40px'}}>
+            <div>
+              <Tooltip 
+                title="Adiciona item ao carrinho de compra" 
+                aria-label="add"  
+                onClick={ handleClickOpen }             
+              >
+                <Fab >
+                    <AddShoppingCartIcon />
+                </Fab>                
+              </Tooltip>
+            </div>           
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
               <DialogTitle id="form-dialog-title">Pedidos</DialogTitle>
               <DialogContent>

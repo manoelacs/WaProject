@@ -54,7 +54,7 @@ const CartListPage = memo((props:any) => {
   const invoiceTotal = subtotal(shopOrder);   
   return (
     <Fragment>
-      <Toolbar title='Usuários' />
+      <Toolbar title='Produtos' />
 
       <Card>
         <CardLoader show={loading} />
